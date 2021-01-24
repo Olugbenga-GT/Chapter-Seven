@@ -37,6 +37,6 @@ public class Exceptions {
     }
     int [] x = {4, 6, 2};
     int[] p  = {1, 2,3, 5};
-    int q []  = {1, 2,3, 5}, y = {82, 21,33};
+    int q []  = {1, 2,3, 5};
 
 }
