@@ -35,12 +35,22 @@ public class Elimination {
         }
     }
 
-
-//    public boolean isDuplicateNumberPresent(int number) {
-//        for (int element : numbers) {
-//
-//        }
-//        return false;
-//    }
+    public boolean isDuplicateNumberPresent(int[] numbers) {
+        for (int element : numbers) {
+            int temp = getInput();
+            if(temp != numbers[element]){
+                numbers[element] = temp;
+                String message = String.format("input is %d", numbers[element]);
+                JOptionPane.showMessageDialog(null, message);
+             return false;
+            }
+            else {
+                String message = String.format("Invalid input. input digits between 10 & 100");
+                JOptionPane.showMessageDialog(null, message);
+            }
+        }
+        return  true;
+    }
 }
+
 

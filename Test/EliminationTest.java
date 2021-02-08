@@ -36,14 +36,13 @@ class EliminationTest {
         assertEquals(30, numbers[2]);
         assertEquals(40, numbers[3]);
         assertEquals(50, numbers[4]);
-//
     }
 
-//    @Test
-//    void testThatThereAreNoDuplicateNumber(){
-//        Elimination elimination = new Elimination();
-//        int[] numbers = new int[5];
-//     assertTrue( Elimination.isDuplicateNumberPresent(numbers));
-//    }
+    @Test
+    void testThatThereAreNoDuplicateNumber(){
+        Elimination elimination = new Elimination();
+        int[] numbers = new int[5];
+     assertTrue( elimination.isDuplicateNumberPresent(numbers));
+    }
 }
 
