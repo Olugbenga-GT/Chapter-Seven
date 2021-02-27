@@ -7,12 +7,17 @@
 
 
 import javax.swing.*;
-import java.util.Arrays;
 
 public class Elimination {
     private int[] numbers;
 
+    public Elimination(){
+        this.numbers = new int[5];
+    }
 
+    public int[] getNumbers(){
+        return  numbers;
+    }
 
     public int getInput() {
         int input = Integer.parseInt(JOptionPane.showInputDialog("Please input your number"));
@@ -28,29 +33,32 @@ public class Elimination {
         return true;
     }
 
-    public  void appendElements(int[] numbers) {
+    public  void appendElements() {
         for (int element = 0; element < numbers.length; element++) {
             int temp = getInput();
-            numbers[element] = temp;
+            if(isNotADuplicateNumber(temp))
+                numbers[element] = temp;
+
         }
     }
 
-    public boolean isDuplicateNumberPresent(int[] numbers) {
+    public void setNumbers(int[] numbers) {
+        this.numbers = numbers;
+    }
+
+    public boolean isNotADuplicateNumber(int temp) {
         for (int element : numbers) {
-            int temp = getInput();
-            if(temp != numbers[element]){
+            /*if(temp != numbers[element]){
                 numbers[element] = temp;
                 String message = String.format("input is %d", numbers[element]);
-                JOptionPane.showMessageDialog(null, message);
-             return false;
-            }
-            else {
-                String message = String.format("Invalid input. input digits between 10 & 100");
-                JOptionPane.showMessageDialog(null, message);
+                JOptionPane.showMessageDialog(null, message);*/
+            if(element == temp){
+                return false;
             }
         }
         return  true;
     }
+
 }
 
 

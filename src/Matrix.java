@@ -1,5 +1,4 @@
 import java.util.Scanner;
-
 public class Matrix {
     public static void main(String[] args) {
         int [][] matrix = new int[2][3];

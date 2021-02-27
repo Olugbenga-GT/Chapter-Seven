@@ -27,22 +27,24 @@ class EliminationTest {
     }
 
     @Test
-    void testThatElementsCanBeAddedToNumbers(){
-        int[] numbers = new int[5];
+    void testForAppendElements(){
+
         Elimination elimination = new Elimination();
-        elimination.appendElements(numbers);
-        assertEquals(10, numbers[0]);
-        assertEquals(20, numbers[1]);
-        assertEquals(30, numbers[2]);
-        assertEquals(40, numbers[3]);
-        assertEquals(50, numbers[4]);
+        elimination.appendElements();
+        assertEquals(10, elimination.getNumbers()[0]);
+        assertEquals(20, elimination.getNumbers()[1]);
+        assertEquals(30, elimination.getNumbers()[2]);
+        assertEquals(40, elimination.getNumbers()[3]);
+        assertEquals(50, elimination.getNumbers()[4]);
     }
 
     @Test
-    void testThatThereAreNoDuplicateNumber(){
+    void testForDuplicateNumber(){
         Elimination elimination = new Elimination();
-        int[] numbers = new int[5];
-     assertTrue( elimination.isDuplicateNumberPresent(numbers));
+
+        int [] numbers = {23, 56, 79};
+        elimination.setNumbers(numbers);
+        assertTrue( elimination.isNotADuplicateNumber(56));
     }
 }
 
